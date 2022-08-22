@@ -1,7 +1,10 @@
 package main
 
-import "trial/checkany"
+import (
+	"trial/restapi"
+)
 
 func main() {
-	checkany.Different()
+	// checkany.Different()
+	restapi.Com()
 }

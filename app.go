@@ -17,6 +17,13 @@ func main() {
 		Name:  "Test token",
 		Value: "SOME_TOKEN_HASH",
 	}
+
+	tk2 := data.Token{
+		Type:  tokentype.Cluster,
+		Name:  "Test token for Cluster",
+		Value: "SOME_TOKEN_HASH",
+	}
+
 	admin := usertype.User{
 		UserId:       0,
 		Name:         "Adam",
@@ -33,14 +40,16 @@ func main() {
 		PasswordHash: "SOME_PASS_HASH",
 		Role:         usertype.ReadOnly,
 	}
+
 	log.Printf("Paas: %+v", tk)
 	log.Printf("Admin user: %+v", admin)
 	log.Printf("ReadOnly user: %+v", user1)
 
+	log.Printf("Paas: %+v", tk2)
+
 	be := tmp.Behavior{
 		Name:   "Bob",
 		Action: tmp.SomeWhere,
-		// Action: tmp.SomeHow,
 	}
 	log.Printf("TMP: %+v", be)
 }

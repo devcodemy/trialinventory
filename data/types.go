@@ -33,5 +33,5 @@ type Cluster struct {
 	ClusterID       string
 	License         string
 	HostUnitsLimit  int // top bar
-	HostUnitsSupply int // avarage
+	HostUnitsSupply int // average
 }

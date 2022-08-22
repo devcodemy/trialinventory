@@ -10,13 +10,5 @@ const (
 )
 
 func (p Purpose) String() string {
-	switch p {
-	case PaaS:
-		return "paas_demo"
-	case Cluster:
-		return "cluster"
-	case Environment:
-		return "env"
-	}
-	return "undefined"
+	return [...]string{"UNDEFINED", "PAAS", "CLUSTER", "ENVIRONMENT"}[p]
 }

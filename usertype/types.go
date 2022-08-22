@@ -10,13 +10,5 @@ const (
 )
 
 func (r Role) String() string {
-	switch r {
-	case Admin:
-		return "admin"
-	case ReadOnly:
-		return "readonly"
-	case Constrain:
-		return "constrain"
-	}
-	return "undefined"
+	return [...]string{"UNDEFINED", "ADMIN", "READONLY", "CONSTRAIN"}[r]
 }

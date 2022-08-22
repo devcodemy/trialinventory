@@ -8,6 +8,18 @@ type Token struct {
 	Value string
 }
 
+type Usage struct {
+	Type  tokentype.Device
+	Name  string
+	Ram   tokentype.Ram
+	Specs []Spec
+}
+
+type Spec struct {
+	Name  string
+	Value string
+}
+
 type Gate struct {
 	Name string
 	IP   string
